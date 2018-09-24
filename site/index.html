@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app" ng-strict-di>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" type="image/png" href="../img/favicon.png">
+        
+        <title>empleaFP</title>       
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->        
+        
+        <link href="../lib/jquery-ui/css/jquery-ui.css"                 rel="stylesheet" type="text/css" /> 
+        <link href="../lib/bootstrap/css/bootstrap.css"                 rel="stylesheet" type="text/css" />
+        <link href="../lib/fontawesome/css/font-awesome.css"            rel="stylesheet" type="text/css" />
+        <link href="../lib/notify/current/css/pnotify.custom.min.css"   rel="stylesheet" type="text/css" /> 
+        <link href="../lib/sweetalert/css/sweet-alert.css"              rel="stylesheet" type="text/css" />
+        <link href="../lib/jquery-plugin-blueimp-fileupload/css/jquery.fileupload.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/site/site.css"                               rel="stylesheet" type="text/css" />
+
+
+        <script type="text/javascript" src="../common/server.js.jsp"></script>          
+        
+        <!-- build:js /js/site.script.min.js -->
+        
+        <!-- jquery -->
+        <script type="text/javascript" src="../lib/jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../lib/bootstrap/js/bootstrap.js"></script>
+        <script type='text/javascript' src="../lib/jquery-ui/js/jquery-ui.js"></script>
+        <script type='text/javascript' src="../lib/jquery-ui/js/jquery.ui.datepicker-es.js"></script>
+        <script type="text/javascript" src="../lib/jquery-plugin-blueimp-fileupload/js/jquery.fileupload.js"></script>
+        
+        <!-- highcharts -->
+        <script type="text/javascript" src="../lib/highcharts/js/highcharts.js"></script>
+        
+        
+        <!-- angular-deps -->
+        <script type='text/javascript' src='../lib/lodash/js/lodash.js'></script>
+        <script type='text/javascript' src='../lib/moment/js/moment-with-langs.js'></script>
+        <script type='text/javascript' src='../lib/notify/current/js/pnotify.custom.min.js'></script>
+        <script type="text/javascript" src="../lib/stacktrace/js/stacktrace.js"></script>
+        <script type="text/javascript" src="../lib/sweetalert/js/sweet-alert.js"></script>
+
+        <!-- angular -->
+        <script type='text/javascript' src='../lib/angularjs/js/angular.js'></script>
+        <script type='text/javascript' src='../lib/angularjs/js/angular-locale_es-es.js'></script>
+        <script type='text/javascript' src='../lib/angular-ui-router/js/angular-ui-router.js'></script> 
+        <script type='text/javascript' src='../lib/angular-filter/js/angular-filter.js'></script>  
+        <script type="text/javascript" src="../lib/checklist-model/js/checklist-model.js"></script>        
+
+        <!-- ix3-angular -->
+        <script type="text/javascript"  src="../lib/ix3-angular/js/ix3-modules.js"></script>
+		
+        <script type="text/javascript"  src="../lib/ix3-angular/js/controller/crud/crudroutes.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/controller/crud/genericcontrollercruddetail.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/controller/crud/genericcontrollercrudlist.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/controller/form/formvalidator.js"></script>
+        
+        <script type="text/javascript"  src="../lib/ix3-angular/js/dao/remotedao.js"></script>
+        
+        <script type="text/javascript"  src="../lib/ix3-angular/js/domain/Schema.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/domain/Property.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/domain/domainvalidator.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/domain/global.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/domain/richdomain.js"></script>
+        
+        <script type="text/javascript"  src="../lib/ix3-angular/js/infrastructure/configuration/ix3configuration.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/infrastructure/exception/exception.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/infrastructure/security/authorizationmanager.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/infrastructure/security/session.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/infrastructure/util/dateFormat.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/infrastructure/util/directiveutil.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/infrastructure/util/langutil.js"></script>
+        
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/directive/form/jquery-ui/ix3datepicker.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/directive/form/ix3businessmessages.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/directive/form/ix3date.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/directive/form/ix3form.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/directive/form/ix3integer.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/directive/form/ix3label.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/directive/form/ix3options.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/directive/form/ix3validation.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/directive/ix3clear.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/directive/ix3orderfieldnames.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/directive/ix3pagination.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/directive/ix3visibility.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/filter/ix3date.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/service/dialog.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/presentation/service/notify.js"></script>
+        
+        <script type="text/javascript"  src="../lib/ix3-angular/js/repository/repository.js"></script>
+        
+        <script type="text/javascript"  src="../lib/ix3-angular/js/service/schema.js"></script>
+        <script type="text/javascript"  src="../lib/ix3-angular/js/service/service.js"></script>       
+
+       
+        <!-- fpempresa-common -->
+        <script type="text/javascript" src="../common/common-module.js"></script>
+        <script type="text/javascript" src="../common/controller/gopage.js"></script>
+        
+        <script type="text/javascript" src="../common/dao/comun/usuario/UsuarioRemoteDAO.js"></script>
+        
+        <script type="text/javascript" src="../common/domain/centro/Centro.js"></script>
+        <script type="text/javascript" src="../common/domain/comun/geo/Direccion.js"></script>
+        <script type="text/javascript" src="../common/domain/comun/usuario/Usuario.js"></script>   
+        <script type="text/javascript" src="../common/domain/empresa/Empresa.js"></script>
+        <script type="text/javascript" src="../common/domain/titulado/FormacionAcademica.js"></script>
+        <script type="text/javascript" src="../common/domain/titulado/Titulado.js"></script>
+        <script type="text/javascript" src="../common/domain/titulado/TituloIdioma.js"></script> 
+        
+        <script type="text/javascript" src="../common/infrastructure/getcontextpath.js"></script>
+        
+        <script type="text/javascript" src="../common/presentation/directive/cruddetailbuttons.js"></script>
+        <script type="text/javascript" src="../common/presentation/directive/fpe-cancel-button.js"></script>
+        <script type="text/javascript" src="../common/presentation/directive/fpe-file-upload.js"></script>
+        <script type="text/javascript" src="../common/presentation/directive/fpe-ok-button.js"></script>        
+        <script type="text/javascript" src="../common/presentation/directive/currentdate.js"></script>
+        <script type="text/javascript" src="../common/presentation/directive/fpe-simple-bar-chart.js"></script>
+        <script type="text/javascript" src="../common/presentation/view/empresa/buscar-empresas.js"></script>
+        <script type="text/javascript" src="../common/presentation/view/empresa/ver-empresa.js"></script>        
+        <script type="text/javascript" src="../common/presentation/view/util/cambiarcontrasenya.js"></script>
+        <script type="text/javascript" src="../common/presentation/view/util/envair-mail-resetear-contrasenya.js"></script>
+        
+        <script type="text/javascript" src="../common/repository/comun/usuario/UsuarioRepository.js"></script>
+        
+        <script type="text/javascript" src="../common/service/centro/CentroService.js"></script>        
+        <script type="text/javascript" src="../common/service/empresa/EmpresaService.js"></script>        
+        <script type="text/javascript" src="../common/service/comun/usuario/UsuarioService.js"></script>      
+        <script type="text/javascript" src="../common/service/titulado/TituladoService.js"></script>        
+        <script type="text/javascript" src="../common/service/util/ageCalculator.js"></script>
+        
+        
+        <!-- fpempresa-site -->
+        <script type="text/javascript" src="lib/easing/js/jquery.easing.min.js"></script>
+        
+        <script type="text/javascript" src="app.js" ></script>
+        <script type="text/javascript" src="app-constant.js" ></script>
+        <script type="text/javascript" src="app-config.js" ></script>   
+        <script type="text/javascript" src="app-route.js" ></script>        
+        <script type="text/javascript" src="app-run.js" ></script>
+        <script type="text/javascript" src="index.js"></script>
+       
+        <script type="text/javascript" src="common/directive/clickbuttononclick.js"></script>
+        <script type="text/javascript" src="common/directive/hideonscroll.js"></script>
+        <script type="text/javascript" src="common/service/animatescroll.js"></script>
+        <script type="text/javascript" src="common/service/routescroll.js"></script>
+        
+        <script type='text/javascript' src='fragments/footer/footer.js'></script>
+        <script type='text/javascript' src='fragments/header/header.js'></script>            
+        
+        <script type="text/javascript" src="views/createaccount/createaccount-route.js" ></script>
+        <script type="text/javascript" src="views/createaccount/register.js" ></script>
+        <script type="text/javascript" src="views/createaccount/init.js" ></script>
+        <script type="text/javascript" src="views/createaccount/end.js" ></script>
+        <script type="text/javascript" src="views/docs/docs-route.js" ></script> 
+        <script type="text/javascript" src="views/login/login-route.js"></script>
+        <script type="text/javascript" src="views/login/login.js"></script>
+        <script type="text/javascript" src="views/validar-email/validar-email-route.js"></script>
+        <script type="text/javascript" src="views/main/main-route.js"></script>
+        <script type="text/javascript" src="views/resetear-contrasenya/resetear-contrasenya-route.js"></script>
+        <script type="text/javascript" src="views/resetear-contrasenya/resetear-contrasenya.js"></script>
+        <script type="text/javascript" src="views/main/main.js"></script>  
+        
+        
+        <!-- endbuild -->
+
+
+    </head>
+
+    <body id="top"  ng-controller="IndexController"  style="background-color: #F6F8F7">   
+    <ng-include src="'fragments/header/header.html'"></ng-include>
+    <ui-view>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div style="text-align: center">
+                <img width="128px" height="128px" src="../img/loading.gif" alt="loading"/>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>        
+    </ui-view>
+    <ng-include src="'fragments/footer/footer.html'"></ng-include> 
+</body>
+</html>

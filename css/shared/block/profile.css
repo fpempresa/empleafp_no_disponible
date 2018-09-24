@@ -1,0 +1,26 @@
+.profile__caption {
+  font-size: 14px;
+  font-weight: bold;
+  color: #005594;
+}
+.profile__value {
+  font-size: 14px;
+  color: #000000;
+}
+.profile__value--cita {
+  font-style: italic;
+}
+.profile__value--name {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #005594;
+  text-transform: uppercase;
+}
+.profile__value--email {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #005594;
+}
+/*# sourceMappingURL=profile.css.map */

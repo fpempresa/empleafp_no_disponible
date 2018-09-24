@@ -1,0 +1,127 @@
+.generic-block--color-dark {
+  color: #005594;
+}
+.generic-block--color-dark-high {
+  color: #000000;
+}
+.generic-block--color-light {
+  color: #F7F9F8;
+}
+.generic-block--color-light-high {
+  color: #ffffff;
+}
+.generic-block--background-color-dark {
+  background-color: #005594;
+}
+.generic-block--background-color-dark-high {
+  background-color: #000000;
+}
+.generic-block--background-color-light {
+  background-color: #F7F9F8;
+}
+.generic-block--background-color-light-high {
+  background-color: #ffffff;
+}
+.section--color-dark {
+  color: #005594;
+}
+.section--color-dark-high {
+  color: #000000;
+}
+.section--color-light {
+  color: #F7F9F8;
+}
+.section--color-light-high {
+  color: #ffffff;
+}
+.section--background-color-dark {
+  background-color: #005594;
+}
+.section--background-color-dark-high {
+  background-color: #000000;
+}
+.section--background-color-light {
+  background-color: #F7F9F8;
+}
+.section--background-color-light-high {
+  background-color: #ffffff;
+}
+.section__container {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-size: 100% auto;
+}
+@media (min-width: 767px) {
+  .section__container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+.section__container a {
+  color: #FFFFFF;
+}
+.section__container--padding {
+  padding-top: 85px;
+  padding-bottom: 42.5px;
+}
+.section__main-title {
+  font-size: 30px;
+  font-weight: bold;
+  border-bottom: solid 2px;
+  display: inline;
+}
+@media (min-width: 767px) {
+  .section__main-title {
+    font-size: 40px;
+  }
+}
+.section__text {
+  padding-top: 20px;
+  font-size: 15px;
+}
+@media (min-width: 767px) {
+  .section__text {
+    font-size: 17px;
+  }
+}
+.section__text--size-high {
+  font-size: 20px;
+}
+@media (min-width: 767px) {
+  .section__text--size-high {
+    font-size: 22px;
+  }
+}
+.section__text--size-low {
+  font-size: 12px;
+}
+@media (min-width: 767px) {
+  .section__text--size-low {
+    font-size: 14px;
+  }
+}
+.section__separator {
+  height: 1px;
+  border: none;
+  margin-top: 3px;
+}
+.section__separator--color-dark {
+  color: #005594;
+  background-color: #005594;
+}
+.section__separator--color-dark-high {
+  color: #000000;
+  background-color: #000000;
+}
+.section__separator--color-light {
+  color: #F7F9F8;
+  background-color: #F7F9F8;
+}
+.section__separator--color-light-high {
+  color: #ffffff;
+  background-color: #ffffff;
+}
+/*# sourceMappingURL=section.css.map */

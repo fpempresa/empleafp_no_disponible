@@ -1,0 +1,44 @@
+<div class="row" >
+    <div class="col-xs-12 form__container" >
+        <div>
+            <ix3-business-messages></ix3-business-messages>
+            <form class="form-horizontal" name="mainForm" id="mainForm"  ix3-form>
+                <fieldset>
+                    <div class="row" >
+                        <div class="col-xs-12 col-sm-12  form-horizontal">
+                            <div class="form-group" ng-hide="usuario.idIdentity!==user.idIdentity" >
+                                <label for="currentPassword" class="col-xs-5 col-sm-5 control-label">Contrase&ntilde;a Actual</label>
+                                <div class="col-xs-7 col-sm-7">
+                                    <input ng-model="model.currentPassword" type="password" class="form-control" id="currentPassword" name="currentPassword" ng-required="usuario.idIdentity===user.idIdentity"  >
+                                </div>
+                            </div> 
+                            <div class="form-group">
+                                <label for="newPassword" class="col-xs-5 col-sm-5 control-label">Nueva Contrase&ntilde;a</label>
+                                <div class="col-xs-7 col-sm-7">
+                                    <input ng-model="model.newPassword" type="password" class="form-control" id="newPassword" name="newPassword" required  >
+                                </div>
+                            </div> 
+                            <div class="form-group">
+                                <label for="confirmPassword" class="col-xs-5 col-sm-5 control-label">Confirmar contrase&ntilde;a</label>
+                                <div class="col-xs-7 col-sm-7">
+                                    <input ng-model="model.confirmPassword" type="password" class="form-control" id="confirmPassword" name="confirmPassword" required >
+                                </div>
+                            </div> 
+                        </div>  
+                    </div>
+                    <br>
+                    <div class="row" >
+                        <div class="col-xs-12 ">                           
+                            <div class=" pull-right">
+                                <button type="button" class="btn form__button form__button--default" ng-click="buttonCancel()" >Cancelar</button>
+                                <button type="button" class="btn form__button form__button--primary" ng-click="buttonOK()">Cambiar Contrase&ntilde;a</button>
+                            </div>
+                        </div>
+                    </div>                    
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+

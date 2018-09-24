@@ -1,0 +1,50 @@
+<div class="row" style="height: 100%" >
+    <div class="col-sm-12 form__container" style="height: 100%" >
+        <div  >
+            <legend class="form__title">Buscar Empresa</legend>
+            <div class="row">
+                <div class="col-xs-8"> 
+                    <input ng-model="filters.$lliker.nombreComercial" type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre comercial"  > 
+                </div>
+                <div class="col-xs-4"> 
+                    <input ng-model="filters.cif" type="text" class="form-control" id="nombre" name="nombre" placeholder="CIF"  > 
+                </div>             
+            </div>          
+            <br>
+            <div class="row" >
+                <div class="col-xs-12 ">
+                    <button type="button" class="btn form__button form__button--primary " ng-click="buttonSearch()">Buscar</button>
+                </div>
+            </div>
+            <br>             
+            <ix3-business-messages></ix3-business-messages>
+            <table class="table table-bordered table-condensed">
+                <thead>                        
+                    <tr class="data-table__head">
+                        <th ix3-order-field-names="nombreComercial"                 style="width:   50%;text-align: center">Nombre Comercial</th>
+                        <th ix3-order-field-names="cif"                             style="width:   15%;text-align: center">CIF</th>
+                        <th ix3-order-field-names="direccion.municipio.descripcion" style="width:   20%;text-align: center">Municipio</th>
+                        <th style="min-width: 80px; width: 80px;text-align: center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="empresa in models" class="data-table__row">
+                        <td ><a href ng-click="buttonSeleccionar(empresa)">{{empresa.nombreComercial}}</a></td>
+                        <td >{{empresa.cif}}</td>
+                        <td >{{empresa.direccion.municipio.descripcion}}</td>                   
+                        <td  >
+                            <div style="text-align:center" >
+                                <button class="btn btn-xs form__button form__button--default" type="button" ng-click="buttonSeleccionar(empresa)">Seleccionar</button>
+                            </div>
+                        </td>                             
+                    </tr>
+                </tbody>
+            </table> 
+            <div class="row">
+                <div class="col-sm-12">
+                    <ix3-pagination></ix3-pagination>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>

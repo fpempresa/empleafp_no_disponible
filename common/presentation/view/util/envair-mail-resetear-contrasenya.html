@@ -1,0 +1,29 @@
+<div class="row" >
+    <div class="col-xs-12 form__container" >
+        <div>
+            <ix3-business-messages></ix3-business-messages>
+            <form name="mainForm" id="mainForm"  ix3-form>
+                <div class="row">
+                    <p>Introduzca su email y le enviaremos las instrucciones para resetear su contraseña</p>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="userEmail">Email:</label>
+                        <input type="email" class="form-control" id="userEmail" name="userEmail" ng-model="userEmail">
+                    </div>
+                </div>
+                <br>
+                <div class="row" >
+                    <div class="col-xs-12 ">                           
+                        <div class=" pull-right">
+                            <button type="button" class="btn form__button form__button--default" ng-click="buttonCancel()" >Cancelar</button>
+                            <button type="button" class="btn form__button form__button--primary" ng-click="buttonOK()">Resetear Contrase&ntilde;a</button>
+                        </div>
+                    </div>
+                </div>                    
+            </form>
+        </div>
+    </div>
+</div>
+
+
